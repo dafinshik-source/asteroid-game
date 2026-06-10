@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Game - Three.js</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: 'Arial', sans-serif; }
+        #info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 10px 20px;
+            border-radius: 8px;
+            pointer-events: none;
+            z-index: 100;
+            font-size: 14px;
+        }
+        #score {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 28px;
+            font-weight: bold;
+            pointer-events: none;
+            z-index: 100;
+        }
+        .controls-hint {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 12px;
+            pointer-events: none;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div id="info">
+        🚀 ASTEROID GAME | Three.js
+    </div>
+    <div id="score">
+        💥 СЧЕТ: <span id="scoreValue">0</span>
+    </div>
+<div class="controls-hint">
+    🎮 УПРАВЛЕНИЕ: W/A/S/D - движение | ЗАЖАТАЯ ЛЕВАЯ КНОПКА МЫШИ + движение - поворот камеры | ПРОБЕЛ - вверх | SHIFT - вниз
+</div>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.128.0/build/three.module.js"
+            }
+        }
+    </script>
+    
+    <script type="module" src="./src/game.js"></script>
+</body>
+</html>
